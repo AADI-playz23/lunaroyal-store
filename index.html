@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunaRoyal Minecraft Server Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #23272f 0%, #1a1d23 100%);
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            background: rgba(34, 39, 47, 0.98);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            padding: 48px 36px;
+            border: 2px solid #6ecf68;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -80px; left: -80px;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, #6ecf68 0%, transparent 70%);
+            opacity: 0.15;
+            z-index: 0;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.6rem;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 16px #6ecf68, 0 1px 0 #222;
+        }
+        h2 {
+            color: #6ecf68;
+            margin-top: 32px;
+            margin-bottom: 14px;
+            font-size: 1.5rem;
+            border-left: 4px solid #6ecf68;
+            padding-left: 10px;
+        }
+        ul {
+            margin: 0 0 18px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.08rem;
+            background: rgba(110, 207, 104, 0.08);
+            border-radius: 6px;
+            padding: 8px 12px;
+            transition: background 0.2s;
+        }
+        li:hover {
+            background: rgba(110, 207, 104, 0.18);
+        }
+        .rank-badge {
+            display: inline-block;
+            font-weight: bold;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-right: 8px;
+            color: #fff;
+            font-size: 1rem;
+            animation: popIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.7); opacity: 0; }
+            80% { transform: scale(1.15); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .vip { background: linear-gradient(90deg, #6ecf68, #4CAF50); }
+        .elite { background: linear-gradient(90deg, #4fa3e3, #1e90ff); }
+        .legendary { background: linear-gradient(90deg, #ffb347, #ff5252); }
+        .key-badge {
+            display: inline-block;
+            font-weight: bold;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-right: 8px;
+            color: #fff;
+            font-size: 1rem;
+            animation: popIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .vote { background: linear-gradient(90deg, #a3ffb3, #6ecf68); }
+        .epic { background: linear-gradient(90deg, #a3c8ff, #4fa3e3); }
+        .legendary-key { background: linear-gradient(90deg, #ffd6a3, #ffb347); }
+        p {
+            font-size: 1.13rem;
+            line-height: 1.8;
+            z-index: 1;
+            position: relative;
+        }
+        .author {
+            margin-top: 36px;
+            font-size: 1rem;
+            color: #b0b0b0;
+            text-align: right;
+            z-index: 1;
+            position: relative;
+        }
+        .store-btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 32px;
+            background: linear-gradient(90deg, #6ecf68, #4fa3e3);
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(110, 207, 104, 0.18);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            text-decoration: none;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            from { box-shadow: 0 2px 12px rgba(110, 207, 104, 0.18); }
+            to { box-shadow: 0 4px 24px rgba(110, 207, 104, 0.35); }
+        }
+        .store-btn:hover {
+            background: linear-gradient(90deg, #4fa3e3, #6ecf68);
+            transform: translateY(-2px) scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LunaRoyal Minecraft Server Store</h1>
+        <p>
+            Welcome to the <strong>LunaRoyal</strong> official server store! Purchase exclusive ranks and crate keys to unlock amazing perks and support the server. All purchases are delivered instantly in-game.
+        </p>
+        <a href="#" class="store-btn">Join Our Discord</a>
+        <h2>Available Ranks</h2>
+        <ul>
+            <li><span class="rank-badge vip">VIP</span>Access to exclusive kits, colored chat, and priority queue. <strong>₹39</strong> <a href="#" class="store-btn pay-btn" data-item="VIP">Buy Now</a></li>
+            <li><span class="rank-badge elite">Elite</span>All VIP perks plus special pets, more homes, and unique cosmetics. <strong>₹79</strong> <a href="#" class="store-btn pay-btn" data-item="Elite">Buy Now</a></li>
+            <li><span class="rank-badge legendary">Legendary</span>All Elite perks plus custom tags, flight in the lobby, and monthly crate keys. <strong>₹99</strong> <a href="#" class="store-btn pay-btn" data-item="Legendary">Buy Now</a></li>
+        </ul>
+        <h2>Crate Keys</h2>
+        <ul>
+            <li><span class="key-badge epic">Epic Key</span>Unlocks epic rewards including gear, cosmetics, and more. <strong>₹149</strong> <a href="#" class="store-btn pay-btn" data-item="Epic Key">Buy Now</a></li>
+            <li><span class="key-badge legendary-key">Legendary Key</span>The best rewards—exclusive items, rare pets, and more! <strong>₹299</strong> <a href="#" class="store-btn pay-btn" data-item="Legendary Key">Buy Now</a></li>
+        </ul>
+        <script>
+            // Redirect to payment page on Buy Now click
+            document.querySelectorAll('.pay-btn').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Replace the URL below with your actual payment gateway or form
+                    window.location.href = 'https://your-payment-link.com';
+                });
+            });
+        </script>
+        <p>
+            <em>Need help? Contact our staff on Discord for support.</em>
+        </p>
+        <div class="author">
+            &mdash; LunaRoyal Store Team
+        </div>
+    </div>
+</body>
+</html>
