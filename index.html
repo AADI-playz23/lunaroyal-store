@@ -86,19 +86,6 @@
         .vip { background: linear-gradient(90deg, #6ecf68, #4CAF50); }
         .elite { background: linear-gradient(90deg, #4fa3e3, #1e90ff); }
         .legendary { background: linear-gradient(90deg, #ffb347, #ff5252); }
-        .key-badge {
-            display: inline-block;
-            font-weight: bold;
-            padding: 2px 10px;
-            border-radius: 12px;
-            margin-right: 8px;
-            color: #fff;
-            font-size: 1rem;
-            animation: popIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
-        }
-        .vote { background: linear-gradient(90deg, #a3ffb3, #6ecf68); }
-        .epic { background: linear-gradient(90deg, #a3c8ff, #4fa3e3); }
-        .legendary-key { background: linear-gradient(90deg, #ffd6a3, #ffb347); }
         p {
             font-size: 1.13rem;
             line-height: 1.8;
@@ -137,6 +124,44 @@
             background: linear-gradient(90deg, #4fa3e3, #6ecf68);
             transform: translateY(-2px) scale(1.03);
         }
+        .server-ip {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6ecf68;
+            letter-spacing: 1px;
+            background: #23272f;
+            padding: 10px 18px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 18px;
+            padding: 12px 32px;
+            background: linear-gradient(90deg, #5865F2, #4fa3e3);
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(88, 101, 242, 0.18);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            text-decoration: none;
+            animation: pulse 2s infinite alternate;
+        }
+        .discord-btn:hover {
+            background: linear-gradient(90deg, #4fa3e3, #5865F2);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .discord-logo {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -145,28 +170,21 @@
         <p>
             Welcome to the <strong>LunaRoyal</strong> official server store! Purchase exclusive ranks and crate keys to unlock amazing perks and support the server. All purchases are delivered instantly in-game.
         </p>
-        <a href="#" class="store-btn">Join Our Discord</a>
+        <a href="https://discord.gg/hmQZ22ARjr" class="discord-btn" target="_blank" rel="noopener">
+            <svg class="discord-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="#5865F2"/>
+                <path d="M24.5 23.5c-1.2-1.1-2.3-2-3.3-2.8.3-.1.6-.3.8-.5 2.2-.6 3.1-2.1 3.1-2.1-.7.5-1.3.8-1.9 1.1-.8.3-1.5.5-2.2.6-.6.1-1.2.1-1.7.1-.5 0-1.1 0-1.7-.1-.7-.1-1.4-.3-2.2-.6-.5-.2-1.2-.6-1.9-1.1 0 0 .9 1.5 3.1 2.1.2.2.5.4.8.5-1 .8-2.1 1.7-3.3 2.8-3.5-.1-4.8-2.4-4.8-2.4 0-5.1 2.3-9.2 2.3-9.2C8.7 9.7 10.2 9.6 10.2 9.6l.2.2c-1.3.4-1.9 1-1.9 1-.1.1 0 .2 0 .2s.2-.1.5-.2c.9-.4 1.6-.6 1.9-.7.5-.1 1.1-.2 1.8-.2h.1c.1 0 .2 0 .3.1 1.2-.2 2.5-.2 3.8 0 .1 0 .2-.1.3-.1h.1c.7 0 1.3.1 1.8.2.3.1 1 .3 1.9.7.3.1.5.2.5.2s.1-.1 0-.2c0 0-.6-.6-1.9-1l.2-.2s1.5.1 3.1 1.8c0 0 2.3 4.1 2.3 9.2 0 0-1.3 2.3-4.8 2.4zM13.1 15.2c-.7 0-1.2.6-1.2 1.3 0 .7.6 1.3 1.2 1.3.7 0 1.2-.6 1.2-1.3.1-.7-.5-1.3-1.2-1.3zm5.8 0c-.7 0-1.2.6-1.2 1.3 0 .7.6 1.3 1.2 1.3.7 0 1.2-.6 1.2-1.3 0-.7-.5-1.3-1.2-1.3z" fill="#fff"/>
+            </svg>
+            Join Our Discord
+        </a>
         <h2>Available Ranks</h2>
         <ul>
             <li><span class="rank-badge vip">VIP</span> VIP Rank – INVITE 40 PLAYERS</li>
             <li><span class="rank-badge elite">Elite</span> Elite Rank – INVITE 100 PLAYERS</li>
             <li><span class="rank-badge legendary">Legendary</span> Legendary Rank – INVITE 200 PLAYERS</li>
         </ul>
-        <h2>Crate Keys</h2>
-        <ul>
-            <li><span class="key-badge epic">Epic Key</span>Unlocks epic rewards including gear, cosmetics, and more. <strong>₹149</strong> <a href="#" class="store-btn pay-btn" data-item="Epic Key">Buy Now</a></li>
-            <li><span class="key-badge legendary-key">Legendary Key</span>The best rewards—exclusive items, rare pets, and more! <strong>₹299</strong> <a href="#" class="store-btn pay-btn" data-item="Legendary Key">Buy Now</a></li>
-        </ul>
-        <script>
-            // Redirect to payment page on Buy Now click
-            document.querySelectorAll('.pay-btn').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    // Replace the URL below with your actual payment gateway or form
-                    window.location.href = 'https://your-payment-link.com';
-                });
-            });
-        </script>
+        <h2>Server IP</h2>
+        <div class="server-ip">lunaroyal.mc.land</div>
         <p>
             <em>Need help? Contact our staff on Discord for support.</em>
         </p>
